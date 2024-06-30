@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+header:after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+}
+
+.container {
+  z-index: 999;
+  position: relative;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Kaushan Script", cursive;
+}
+
+.container h1 {
+  letter-spacing: 3px;
+  font-size: 2.3rem;
+}
+
+.container p a {
+  color: red;
+  text-decoration: none;
+}
+
+.khodam {
+  min-width: 90%;
+  max-width: 90%;
+  margin-top: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.khodam form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#search {
+  font-family: "Kaushan Script", cursive;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  padding: 15px 4px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #ccc;
+  color: white;
+  margin-bottom: 12px;
+  border-radius: 15px;
+}
+
+#btn-search {
+  font-family: "Kaushan Script", cursive;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  width: 30%;
+  margin: auto;
+  padding: 6px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #ccc;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+#btn-search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: left 0.5s;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+#btn-search:hover {
+  color: black;
+}
+
+#btn-search:hover::before {
+  left: 0;
+}
+
+#btn-search span {
+  position: relative;
+  z-index: 2;
+}
+
+#result {
+  color: red;
+  font-weight: bold;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+@media (min-width: 1000px) {
+  .khodam {
+    min-width: 50%;
+    max-width: 50%;
+  }
+}
